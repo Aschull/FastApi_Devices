@@ -1,6 +1,6 @@
 from fastapi import FastAPI
 from models.models import init_db, Dispositivos
-from routers import device
+from resource import device
 import uvicorn
 
 app = FastAPI()
