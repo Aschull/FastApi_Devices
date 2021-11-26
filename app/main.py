@@ -1,6 +1,6 @@
 from fastapi import FastAPI
-from models.models import init_db, Dispositivos
-from resource import device
+from app.models.models import init_db, Dispositivos
+from app.resource import device
 import uvicorn
 
 app = FastAPI()

@@ -1,12 +1,12 @@
-from common.utils import converte_data
-from domain.device_domain import Device
-from models.models import Dispositivos
+from app.common.utils import converte_data
+from app.domain.device_domain import Device
+from app.models.models import Dispositivos
 from fastapi import APIRouter
 
-api = APIRouter()
+router = APIRouter()
 
 
-@api.get("/device/")
+@router.get("/device/")
 def list_all():
     dispositivos = Dispositivos.query.all()
     response = [
@@ -15,7 +15,7 @@ def list_all():
     return response
 
 
-@api.get("/device/{id}")
+@router.get("/device/{id}")
 def list_by_id(id: int):
     dispositivos = Dispositivos.query.filter_by(id=id).first()
     try:
@@ -34,7 +34,7 @@ def list_by_id(id: int):
     return response
 
 
-@api.post("/insertDevice")
+@router.post("/insertDevice")
 def insert_device(device: Device):
     dispositivos = Dispositivos(nome=device.nome, latitude=device.latitude, longitude=device.longitude)
     dispositivos.save()
@@ -48,7 +48,7 @@ def insert_device(device: Device):
     return response
 
 
-@api.delete("/device/{id}")
+@router.delete("/device/{id}")
 def delete_by_id(id):
     dispositivos = Dispositivos.query.filter_by(id=id).first()
     try:

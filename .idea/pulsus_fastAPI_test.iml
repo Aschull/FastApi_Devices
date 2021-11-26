@@ -5,8 +5,9 @@
       <excludeFolder url="file://$MODULE_DIR$/venv_fast_api" />
       <excludeFolder url="file://$MODULE_DIR$/venv_fastAPI" />
       <excludeFolder url="file://$MODULE_DIR$/venv_fastApi_devices" />
+      <excludeFolder url="file://$MODULE_DIR$/venv_devices" />
     </content>
-    <orderEntry type="jdk" jdkName="Python 3.9 (venv_fastApi_devices)" jdkType="Python SDK" />
+    <orderEntry type="jdk" jdkName="Python 3.9 (FastApi_Devices)" jdkType="Python SDK" />
     <orderEntry type="sourceFolder" forTests="false" />
   </component>
 </module>
